@@ -75,7 +75,11 @@ const addButton = document.querySelector('.button-46');
 const form = document.querySelector('.addBook');
 
 addButton.addEventListener('click', () => {
-    form.style.display = 'flex';
+    if (form.style.display === 'flex') {
+        form.style.display = 'none';
+    } else {
+        form.style.display = 'flex';
+    }
 });
 
 function addBookToLibrary(title, author, pages, read) {
